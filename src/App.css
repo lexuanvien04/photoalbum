@@ -1,38 +1,434 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  height: 100%; 
+  background-color: #fff;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-collapse{
+  margin-left: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.nav-item{
+  display: block;
+  font-family: "Nunito",sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  
+}
+
+.nav-link :active {
+  color: #D9322B;
+}
+
+.nav-item .nav-link{
+  margin-right: 30px;
+  color: #3C4858;
+}
+
+.nav-item .nav-link:hover{
+  color: #D9322B;
+}
+
+.form-group{
+  position: relative;
+}
+
+.form-group input{
+  height: 40px;
+  width: 250px;
+}
+
+.banner{
+  width: 100%;
+}
+
+.btn-search{
+  top: 13px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  padding: 6px 12px;
+  margin-left: 5px;
+  background-color: transparent;
+}
+
+.rounded-pill{
+  padding-left: 10px;
+  font-size: 15px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+
+.buy-button{
+  width: 100px;
+}
+
+button.btn-user{
+  width: 34px;
+  height: 34px;
+  padding: 4px 9px;
+  border: none;
+  border-radius: 50%;
+  background-color: #e43f52;
+  color: #fff;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+/* Content */
+
+/* Top View */
+.content{
+  margin: 30px 15% 0;
+}
+
+.content .title{
+  margin-bottom: 20px;
+}
+
+.content span:first-child{
+  border-left: 5px solid red;
+  margin: 0 0 30px;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content .view-all{
+  margin-left: 77%;
+}
+
+.btn-pills{
+  float: right;
+}
+
+.card-img{
+  width: 330px;
+  height: 260px
+}
+
+.card-img img{
+  width: 100%;
+  height: 100%
+}
+
+.card-text{
+  text-overflow: ellipsis;
+}
+
+.card img:hover{
+  
+}
+
+.text{
+  font-size: 30px;
+  font-family: "Nunito",sans-serif;
+}
+
+.banner-small{
+  margin-top: 30px;
+}
+
+.banner-small img{
+  border-radius: 10px;
+  width: 100%;
+  height: 110px;
+}
+
+
+/* Business Type */
+
+.business-type{
+  margin-top: 30px;
+}
+
+.business-row{
+  margin-bottom: 20px;
+}
+
+.avatar.avatar-small {
+  height: 65px;
+  width: 65px;
+}
+
+.business-type-icon{
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.business-type-icon img{
+  background: linear-gradient(45deg,transparent,hsla(0,0%,51.4%,.219));
+  margin: 40px 0 10px;
+  transition-duration: 1s;
+}
+
+.business-type-icon img:hover{
+  transform: rotate(360deg);
+}
+
+.content-business{
+  margin-bottom: 40px;
+}
+
+/* Top Business */
+.top-business{
+  margin-top: 30px;
+}
+
+/* Videos */
+.videos{
+  margin-top: 30px;
+}
+
+/* Flash Sale */
+.flash-sale{
+  margin-top: 30px;
+}
+
+/* Events */
+.events{
+  margin-top: 30px;
+}
+
+/* Footer */
+
+.footer-content{
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+
+.icon i{
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgb(188, 188, 188);
+  border-radius: 20%;
+  display:inline-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-right: 7px;
+  cursor: pointer;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.app img{
+  width: 134px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer-list p:hover{
+  color: #e43f52;
+}
+
+
+/* Scroll To Top */
+.top-to-btm{
+  position: relative;
+}
+.icon-position{
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+.icon-style{
+  background-color: #D9322B;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  animation: movebtn 3s ease-in-out infinite;
+  transition: all .5s ease-in-out;
+}
+.icon-style:hover{
+  animation: none;
+  background: #fff;
+  color: #D9322B;
+  border: 2px solid #D9322B;
+}
+@keyframes movebtn {
+  0%{
+    transform: translateY(0px);
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+    transform: translateY(20px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0px);
   }
 }
+
+
+/* Trang business */
+.title-business{
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Nunito",sans-serif;
+  color: #000;
+  background-color: #f8f9fa;
+}
+
+.business-content{
+  margin: 40px 15%;
+}
+
+/* SideNav */
+
+.search-list{
+  border: 1px solid rgb(218, 217, 217);
+  border-radius: 7px;
+  height: auto;
+  padding: 10px 0;
+  display: block;;
+}
+
+.search-list input{
+  padding-left: 5px;
+  border: none;
+  background-color: transparent;
+  
+}
+
+.search-list button{
+  border: none;
+  background-color: transparent;
+  width: 20%;
+}
+
+.search-list i{
+  width: 100%;
+  color: #D9322B;
+}
+
+.menu-list{
+  border: 1px solid rgb(218, 217, 217);
+  border-radius: 7px;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.menu-list .title{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item-list p{
+  margin-left: 20px;
+  color: #000;
+}
+
+.item-list span{
+  float: right;
+}
+
+.item-list .active{
+  color: #D9322B;
+  background-color: rgba(255,130,144,.26);
+}
+
+.item-list p:hover{
+  color: #D9322B;
+  background-color: rgba(255,130,144,.26);
+}
+
+.top-business .title{
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.box-item .item img{
+  width: 110px;
+  height: 110px;
+}
+
+.box-item .item{
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.box-item .item:hover{
+  background-color: rgba(255,130,144,.11);
+  border-radius: 5px;
+}
+
+.item .item-title{
+  float: right;
+  margin-right: 40px;
+  margin-top: 25px;
+}
+
+/* Content Business */
+
+.view-business h5{
+  padding-top: 10px;
+}
+
+
+.card-title{
+  margin-top: 10px;
+}
+
+.business-list .row{
+  margin-bottom: 20px;
+}
+
+.img-detail{
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-detail img{
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+}
+
+.title-detail p{
+  font-size: 30px;
+}
+
+.title-detail .icon-detail{
+  float: right;
+}
+
+
+/* Medias */
+.ripple .img-item{
+  width: 225px;
+  height: 225px;
+}
+
+.item .card{
+  margin-bottom: 20px;
+}
+
+.text-warning ul{
+  font-size: 20px;
+}
+
+
+
+/*dfsfdsf*/
